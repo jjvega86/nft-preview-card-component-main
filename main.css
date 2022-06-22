@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --primary-color-softBlue: hsl(215, 51%, 70%);
+  --primary-color-cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --bg-primary: hsl(217, 54%, 11%);
+  --bg-card: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  /* Body Copy */
+  --paragraph-font-size: 18px;
+
+  /* Font */
+  --default-font: "Outfit", sans-serif;
+}
+
+body {
+  font-family: var(--default-font);
+  background-color: var(--bg-primary);
+  color: var(--primary-color-softBlue);
+  font-size: var(--paragraph-font-size);
+}
