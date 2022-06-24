@@ -1,11 +1,7 @@
 /* TODO: hover overlay for cover image, title, author */
 /* TODO: fix sizing issues (mobile to desktop) */
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+/* VARIABLES */
 
 :root {
   /* Primary */
@@ -29,14 +25,24 @@
   --weight-600: 600;
 }
 
+/* GLOBALS */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--default-font);
   background-color: var(--bg-primary);
   color: var(--primary-color-softBlue);
   font-size: var(--paragraph-font-size);
   font-weight: var(--weight-300);
-  margin: 5rem auto;
+  margin: 5rem 2rem;
 }
+
+/* CLASSES */
 
 hr.solid {
   border: 0;
@@ -47,16 +53,16 @@ hr.solid {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 0.5rem;
   background-color: var(--bg-card);
   padding: 2px 16px;
   border-radius: 20px;
   margin: 0 auto;
-  max-width: 30rem;
+  max-width: 25rem;
 }
 
 .container {
-  padding: 2px 16px;
+  padding: 1rem;
   max-width: 90%;
 }
 
@@ -79,20 +85,23 @@ hr.solid {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
 .footer img {
-  width: 15%;
+  max-width: 40px;
   border: 1px solid var(--white);
   border-radius: 25px;
 }
 
 .attribution {
   display: flex;
+  gap: 1rem;
   justify-content: center;
+  align-items: center;
   margin-top: 3rem;
 }
+
+/* IDs */
 
 #cover {
   display: block;
@@ -104,4 +113,16 @@ hr.solid {
 
 #author {
   color: var(--white);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 450px) {
+  .attribution {
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
 }
