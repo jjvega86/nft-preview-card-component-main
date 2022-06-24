@@ -1,3 +1,6 @@
+/* TODO: hover overlay for cover image, title, author */
+/* TODO: fix sizing issues (mobile to desktop) */
+
 *,
 *::after,
 *::before {
@@ -32,7 +35,7 @@ body {
   color: var(--primary-color-softBlue);
   font-size: var(--paragraph-font-size);
   font-weight: var(--weight-300);
-  margin: 5% auto;
+  margin: 5rem auto;
 }
 
 hr.solid {
@@ -45,21 +48,22 @@ hr.solid {
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
-  margin: 20rem 20rem;
   background-color: var(--bg-card);
   padding: 2px 16px;
-  width: 30%;
-  min-width: 375px;
   border-radius: 20px;
+  margin: 0 auto;
+  max-width: 30rem;
 }
 
 .container {
   padding: 2px 16px;
+  max-width: 90%;
 }
 
 .title {
   color: var(--white);
   font-weight: var(--weight-600);
+  font-size: 1.75rem;
 }
 
 .info {
@@ -87,13 +91,14 @@ hr.solid {
 .attribution {
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 #cover {
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
-  width: 95%;
+  max-width: 100%;
   border-radius: 20px;
 }
 
