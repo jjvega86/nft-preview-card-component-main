@@ -1,12 +1,10 @@
-/* TODO: hover overlay for cover image, title, author */
-/* TODO: fix sizing issues (mobile to desktop) */
-
 /* VARIABLES */
 
 :root {
   /* Primary */
   --primary-color-softBlue: hsl(215, 51%, 70%);
   --primary-color-cyan: hsl(178, 100%, 50%);
+  --primary-color-cyan-faded: hsl(178, 100%, 50%, 0.3);
 
   /* Neutral */
   --bg-primary: hsl(217, 54%, 11%);
@@ -70,6 +68,13 @@ hr.solid {
   color: var(--white);
   font-weight: var(--weight-600);
   font-size: 1.75rem;
+  margin-top: 0.25rem;
+}
+
+.title:hover,
+#author:hover {
+  color: var(--primary-color-cyan);
+  cursor: pointer;
 }
 
 .info {
@@ -99,6 +104,37 @@ hr.solid {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+}
+
+.cover-container {
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background: var(--primary-color-cyan-faded);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 8rem;
+}
+
+.cover-container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* IDs */
